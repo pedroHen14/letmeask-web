@@ -12,7 +12,7 @@ import { database } from '../../services/firebase';
 
 export function Home() {
 	const history = useHistory();
-	const { user, signInWithGoogle } = useAuth();
+	const { user, theme, setTheme, signInWithGoogle } = useAuth();
 	const [roomCode, setRoomCode] = useState('');
 
 	async function handleCreateRoom() {
@@ -98,6 +98,12 @@ export function Home() {
 						/>
 						<Button type="submit">
 							Entrar na sala
+						</Button>	
+						<Button onClick={() => {
+							setTheme(!theme)
+							console.log(theme);	
+						}}>
+							Teste
 						</Button>
 					</form>
 				</div>

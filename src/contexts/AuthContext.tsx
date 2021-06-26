@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from 'react';
 import { auth, firebase } from '../services/firebase';
 
 export const AuthContext = createContext({} as AuthContextype);
@@ -11,7 +11,9 @@ type User = {
 
 type AuthContextype = {
   user: User | undefined;
+  theme: boolean;
   signInWithGoogle: () => Promise<void>;
+  setTheme: Dispatch<SetStateAction<boolean>>;
 };
 
 type AuthContextProviderProps = {
@@ -21,6 +23,8 @@ type AuthContextProviderProps = {
 export function AuthContextProvider(props: AuthContextProviderProps) {
 
 	const [user, setUser] = useState<User>();
+
+  const [theme, setTheme] = useState(false);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(user => {
@@ -67,7 +71,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
   }
 
 	return(
-		<AuthContext.Provider value={{ user, signInWithGoogle }}>
+		<AuthContext.Provider value={{ user, theme, setTheme, signInWithGoogle  }}>
 			{props.children}
 		</AuthContext.Provider>
 	);

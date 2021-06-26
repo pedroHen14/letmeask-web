@@ -1,5 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 
+
+type Props = {
+	theme: boolean;
+}
+
 export const GlobalStyles = createGlobalStyle`
 	* {
 		padding: 0;
@@ -9,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
 	@media (prefers-color-scheme: light) {
 		body {
-			background: #f8f8f8;
+			background-color: ${(p: Props) => p.theme ? '#f8f8f8' : '#000'};
 			color: #29292e;
 		}
 
@@ -52,7 +57,7 @@ export const GlobalStyles = createGlobalStyle`
 
 	@media (prefers-color-scheme: dark) {
 		body {
-			background-color: #2a2349; // 🌑
+			background-color: ${(p: Props) => p.theme ? '#f8f8f8' : '#000'}; // 🌑
 			color: #f0ece2;
 		}
 
