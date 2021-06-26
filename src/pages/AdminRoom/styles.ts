@@ -1,5 +1,7 @@
-#page-room {
-  header {
+import styled from "styled-components";
+
+export const Container = styled.div`
+header {
     padding: 24px;
     border-bottom: 1px solid #e2e2e2;
 
@@ -37,7 +39,7 @@
       h1 {
         font-family: "Poppins", sans-serif;
         font-size: 24px;
-        color: #29292e;
+        // color: #29292e;
       }
 
       span {
@@ -82,7 +84,7 @@
 
           span {
             margin-left: 8px;
-            color: #29292e;
+            // color: #29292e;
             font-weight: 500;
             font-size: 14px;
           }
@@ -110,4 +112,6 @@
       margin-top: 32px;
     }
   }
-}
+`;
+  
+

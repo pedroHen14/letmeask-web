@@ -1,5 +1,7 @@
-#page-auth {
-  display: flex;
+import styled from 'styled-components';
+
+export const Container = styled.div`
+display: flex;
   align-items: stretch;
   height: 100vh;
 
@@ -131,4 +133,6 @@
       margin-left: 16px;
     }
   }
-}
+
+`;
+  
