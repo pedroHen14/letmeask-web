@@ -11,11 +11,9 @@ import { useAuth } from './hooks/useAuth';
 
 
 function Routes() {
-  const { theme } = useAuth();
 	return(
 		<BrowserRouter>
 			<AuthContextProvider>
-      	<GlobalStyles theme={theme}/>
 				<Switch>
 					<Route path="/" exact component={Home} />
 					<Route path="/rooms/new" component={NewRoom} />

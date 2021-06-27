@@ -1,10 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
-type Props = {
-	theme: boolean;
-}
-
 export const GlobalStyles = createGlobalStyle`
 	* {
 		padding: 0;
