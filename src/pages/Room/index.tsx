@@ -147,7 +147,6 @@ export function Room() {
 									</button>
 								)}
 							</Question>
-
 						)
 					})}
 				</div>

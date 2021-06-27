@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
 
 	@media (prefers-color-scheme: light) {
 		body {
-			background-color: ${(p: Props) => p.theme ? '#f8f8f8' : '#000'};
+			background-color: #f8f8f8;
 			color: #29292e;
 		}
 
@@ -57,7 +57,7 @@ export const GlobalStyles = createGlobalStyle`
 
 	@media (prefers-color-scheme: dark) {
 		body {
-			background-color: ${(p: Props) => p.theme ? '#f8f8f8' : '#000'}; // 🌑
+			background-color: #202E3A; // 🌑
 			color: #f0ece2;
 		}
 
