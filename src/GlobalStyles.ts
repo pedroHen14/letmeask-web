@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
 		color: #29292e;
 	}
 
-	@media (prefers-color-scheme: dark) {
+	@media (prefers-color-scheme: light) {
 		body {
 			background-color: #202E3A; // 🌑
 			color: #f0ece2;

@@ -47,7 +47,7 @@ display: flex;
     align-items: stretch;
     text-align: center;
 
-    > img {
+    > svg {
       align-self: center;
     }
 
